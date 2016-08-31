@@ -757,38 +757,52 @@ div.ui-dialog fieldset {
     position: relative;
     float: right;
 
+    width: 96px;
+
     margin-right: 5px;
 
     padding-left: 8px;
     padding-right: 8px;
-    padding-top: 1px;
-    padding-bottom: 2px;
+    padding-top: 4px;
+    padding-bottom: 4px;
 
     border-style: solid;
-    border-radius: 3px;
+    border-radius: 2px;
     border-width: thin;
-    border-color: rgb(223, 223, 223);
+    border-color: rgb(207, 207, 207);
 
     font-family: 'Open Sans', sans-serif;
     font-size: small;
     font-weight: 200;
 
     color: #444;
-    background-color: white;
+    background-color: #ffffff;
+
 }
 
-.igv-toggle-track-labels:hover,
-.igv-toggle-track-labels:focus,
-.igv-toggle-track-labels:active  {
+.igv-button-inset-shadow {
 
-    cursor: pointer;
+    /*border-color: rgb(223, 223, 223);*/
 
-    border-color: #afafaf;
-    /*border-width: 2px;*/
+    -moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, .6);
+    -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, .6);
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, .6);
 
-    /*color: white;*/
-    /*background-color: #c4c4c4;*/
+    /*background-color: rgb(223, 223, 223);*/
 }
+
+/*.igv-toggle-track-labels:hover,*/
+/*.igv-toggle-track-labels:focus,*/
+/*.igv-toggle-track-labels:active  {*/
+
+    /*cursor: pointer;*/
+
+    /*border-color: #afafaf;*/
+    /*!*border-width: 2px;*!*/
+
+    /*!*color: white;*!*/
+    /*!*background-color: #c4c4c4;*!*/
+/*}*/
 
 .igvNavigationMarginLeft12 {
 

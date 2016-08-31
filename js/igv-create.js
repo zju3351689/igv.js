@@ -334,9 +334,17 @@ var igv = (function (igv) {
             $trackLabelToggle.text("hide labels");
 
             $trackLabelToggle.click(function () {
+
                 browser.trackLabelsVisible = !browser.trackLabelsVisible;
                 $(this).text(true === browser.trackLabelsVisible ? "hide labels" : "show labels");
+                if (true === browser.trackLabelsVisible) {
+                    $(this).removeClass('igv-button-inset-shadow');
+                } else {
+                    $(this).addClass('igv-button-inset-shadow');
+                }
+
                 $(browser.trackContainerDiv).find('.igv-track-label').toggle();
+
             });
 
             $guideLineToggle = $('<div class="igv-toggle-track-labels">');
@@ -347,6 +355,13 @@ var igv = (function (igv) {
                 var display = $(igv.browser.guideLineDiv).css("display");
                 $(igv.browser.guideLineDiv).css("display", display==="none" ? "block" : "none");
                 $guideLineToggle.text(display==="none" ? "hide guide" : "show guide");
+
+                if ('none' === display) {
+                    $(this).removeClass('igv-button-inset-shadow');
+                } else {
+                    $(this).addClass('igv-button-inset-shadow');
+                }
+
             });
 
             // Hide toggle unless property is set (for now, prior to official release)
